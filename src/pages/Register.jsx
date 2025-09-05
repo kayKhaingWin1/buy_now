@@ -32,7 +32,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3001/users", {
+      const response = await axios.post("https://buy-now-vqc4.onrender.com/users", {
         username,
         email,
         password,

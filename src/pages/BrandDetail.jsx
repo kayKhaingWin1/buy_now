@@ -15,7 +15,7 @@ const BrandDetail = () => {
 
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/brands/${id}`)
+    axios.get(`https://buy-now-vqc4.onrender.com/${id}`)
       .then(response => {
         setBrand(response.data);
       })
@@ -25,7 +25,7 @@ const BrandDetail = () => {
   }, [id]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/products`)
+    axios.get(`https://buy-now-vqc4.onrender.com/products`)
       .then(response => {
         const filteredProducts = response.data.filter(product => product.brand === brand?.name);
         setProducts(filteredProducts);

@@ -28,7 +28,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/products/${id}`)
+      .get(`https://buy-now-vqc4.onrender.com/products/${id}`)
       .then((response) => {
         setProduct(response.data);
         setLoading(false);

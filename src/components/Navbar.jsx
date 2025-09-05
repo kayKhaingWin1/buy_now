@@ -56,7 +56,7 @@ const Navbar = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get('http://localhost:3001/categories')
+        axios.get('https://buy-now-vqc4.onrender.com/categories')
             .then(response => {
                 setCategories(response.data)
             })

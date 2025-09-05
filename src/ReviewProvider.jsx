@@ -9,7 +9,7 @@ const ReviewProvider = ({ children }) => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/reviews');
+        const response = await axios.get('https://buy-now-vqc4.onrender.com/reviews');
         setReviews(response.data);
       } catch (error) {
         console.error('Error fetching reviews:', error);
@@ -18,7 +18,7 @@ const ReviewProvider = ({ children }) => {
 
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/orders');
+        const response = await axios.get('https://buy-now-vqc4.onrender.com/orders');
         setOrders(response.data);
       } catch (error) {
         console.error('Error fetching orders:', error);
@@ -31,7 +31,7 @@ const ReviewProvider = ({ children }) => {
 
   const addReview = async (newReview) => {
     try {
-      const response = await axios.post('http://localhost:3001/reviews', newReview);
+      const response = await axios.post('https://buy-now-vqc4.onrender.com/reviews', newReview);
       setReviews([...reviews, response.data]);
     } catch (error) {
       console.error('Error adding review:', error);

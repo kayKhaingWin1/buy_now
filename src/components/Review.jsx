@@ -18,7 +18,7 @@ const Review = ({ product }) => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/reviews?productId=${product.id}`);
+        const response = await axios.get(`https://buy-now-vqc4.onrender.com/reviews?productId=${product.id}`);
         setReviews(response.data);
       } catch (error) {
         console.error("Error fetching reviews:", error);
@@ -48,7 +48,7 @@ const Review = ({ product }) => {
     };
 
     try {
-      const response = await axios.post("http://localhost:3001/reviews", newReview);
+      const response = await axios.post("https://buy-now-vqc4.onrender.com/reviews", newReview);
       setReviews([...reviews, response.data]);
       setReviewText("");
       setRating(1);

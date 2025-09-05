@@ -15,8 +15,8 @@ const Orders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const ordersResponse = await axios.get(`http://localhost:3001/orders?userId=${user.id}`);
-        const productsResponse = await axios.get('http://localhost:3001/products');
+        const ordersResponse = await axios.get(`https://buy-now-vqc4.onrender.com/orders?userId=${user.id}`);
+        const productsResponse = await axios.get('https://buy-now-vqc4.onrender.com/products');
 
         const sortedOrders = ordersResponse.data.map(order => ({
           ...order,
